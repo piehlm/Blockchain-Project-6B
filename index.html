@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaveLLin Service Portal</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">JaveLLin Service Portal</h1>
+        <hr>
+        <p style="text-align: center;">Show the full history of any device using the Ethereum blockchain.</p>
+    </div>
+
+    <div id="ftc-manufacture">
+        <h2>Product Overview</h2>
+        <div class="form-group">
+            SKU
+            <br>
+            <input class="input-field" type="number" id="sku" name="sku" value=1><br>
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" value=1><br>
+           Current Owner ID
+            <br>
+            <input type="text" id="ownerID" name="ownerID" value="0x27d8d15cbc94527cadf5ec14b69519ae23288b95" size="50"><br>
+            <div class=button-div>
+                <button class="btn-fetchOne" id="button" type="button" data-id="20">Fetch Data 1</button>
+                <button class="btn-fetchTwo" id="button" type="button" data-id="21">Fetch Data 2</button>
+                <button class="btn-fetchThree" id="button" type="button" data-id="22">Fetch Data 3</button>
+            </div>
+        </div>
+        <div class=form-break></div>
+        <h2>Manufacturer Details</h2>
+        <div class="form-group">
+            Manufacturer ID
+            <br>
+            <input type="text" id="originMfgID" name="originMfgID" value="0x27d8d15cbc94527cadf5ec14b69519ae23288b95"
+                size="50"><br>
+            Manufacturer Name
+            <br>
+            <input type="text" id="originMfgName" name="originMfgName" value="Widget Factory"><br>
+            Manufacturer Information
+            <br>
+            <input type="text" id="originMfgInformation" name="originMfgInformation" value="Producer of the best widgets on the planet"><br>
+            Manufacturer Latitude
+            <br>
+            <input type="text" id="originMfgLatitude" name="originMfgLatitude" value="-38.239770"><br>
+            Manufacturer Longitude
+            <br>
+            <input type="text" id="originMfgLongitude" name="originMfgLongitude" value="144.341490"><br>
+            <br>
+            <button class="btn-manufacture" id="button" type="button" data-id="1">Manufacture</button>
+            <button class="btn-forsale" id="button" type="button" data-id="2">ForSale</button>
+            <button class="btn-shipitem" id="button" type="button" data-id="3">ShipItem</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Product Details</h2>
+        <div class="form-group">
+            Product Notes
+            <br>
+            <input type="text" id="productNotes" name="productNotes" value="The Piehl blockchain widget" size="60"><br>
+            Product Price
+            <br>
+            <input type="number" id="productPrice" name="productPrice" value=1>ETH<br>
+            Product Usage Count
+            <br>
+            <input type="number" id="srvUsage" name="srvUsage" value=0><br>
+            Seller ID
+            <br>
+            <input type="text" id="sellerID" name="sellerID" value="0x27d8d15cbc94527cadf5ec14b69519ae23288b95"
+                size="50"><br>
+            Consumer ID
+            <br>
+            <input type="text" id="consumerID" name="consumerID" value="0xce5144391b4ab80668965f2cc4f2cc102380ef0a"
+                size="50"><br>
+            <br>
+            Service Provider ID
+            <br>
+            <input type="text" id="srvID" name="srvID" value="0x460c31107dd048e34971e57da2f99f659add4f02"
+                size="50">
+            <br>
+            Problem Notes
+            <br>
+            <input type="text" id="probNotes" name="probNotes" value="My widget malfunctions in the rain."
+                size="50">
+            <br>
+            <button class="btn-buy" id="button" type="button" data-id="4">Buy</button>
+            <button class="btn-receive" id="button" type="button" data-id="5">Receive</button>
+            <button class="btn-srvcall" id="button" type="button" data-id="7">Service Call</button>
+            <button class="btn-shipsrv" id="button" type="button" data-id="8">ShipSrv</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Service Provider Details</h2>
+        <div class="form-group">
+            Service Provider ID
+            <br>
+            <input type="text" id="srvID" name="srvID" value="0xf1b1bcd24dad92303dd9fe78be639f7bcf9c238d"
+                size="50">
+            <br>
+            Service Notes
+            <br>
+            <input type="text" id="srvNotes" name="srvNotes" value="Reset the firmware." size="60"><br>
+            <br>
+            <button class="btn-receivesrv" id="button" type="button" data-id="9">ReceiveSrv</button>
+            <button class="btn-repair" id="button" type="button" data-id="10">Repair</button>
+            <button class="btn-repaired" id="button" type="button" data-id="11">Repaired</button>
+            <button class="btn-eol" id="button" type="button" data-id="12">EOL</button>
+            <button class="btn-shipitem" id="button" type="button" data-id="13">ShipItem</button>
+        </div>
+        <div class=form-break></div>
+        <hr>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="src/js/truffle-contract.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>
