@@ -21,6 +21,7 @@ The App has a lot of potential, including enhancing the web experience with upda
 ## How to use the project?
 From the project folder
 Execute:  npm run dev
+
 this will execute the project to run on your local machine.
 From there, go you browser:
 http://localhost:8080/
